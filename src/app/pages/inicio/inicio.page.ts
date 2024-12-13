@@ -10,6 +10,7 @@ import { ForumComponent } from 'src/app/components/forum/forum.component';
 import { MisDatosComponent } from 'src/app/components/mis-datos/mis-datos.component';
 import { CodigoqrComponent } from 'src/app/components/codigoqr/codigoqr.component';
 import { MiClaseComponent } from 'src/app/components/mi-clase/mi-clase.component';
+import { UsuariosComponent } from 'src/app/components/usuarios/usuarios.component';
 import { Router } from '@angular/router';
 import { Asistencia } from 'src/app/model/asistencia';
 
@@ -28,7 +29,8 @@ import { Asistencia } from 'src/app/model/asistencia';
     CodigoqrComponent,
     ForumComponent,
     MisDatosComponent,
-    MiClaseComponent 
+    MiClaseComponent,
+    UsuariosComponent
   ]
 })
 export class InicioPage {

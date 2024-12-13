@@ -2,14 +2,17 @@
   <div class="background"></div>
   <div class="centrar">
     <div>
-      <img src="../../assets/img/logoBlanco.png" style="width: 75%;">
+      <img src="../../assets/img/logoPrincipal.png" style="height: 100px;">
       <h1 class="ion-padding-bottom">Sistema de Asistencia DUOC</h1>
       <ion-card>
         <ion-card-header style="color: white;">
-          <span class="image-text">¡Intenta de nuevo! <br> el correo ingresado <br> no es correcto</span>
+        
+         <span class="image-text" [innerHTML]="'PasswordConfirmation.incorrectData' | translate"></span>
+          
+          
         </ion-card-header>
         <ion-card-content class="ion-padding-bottom">
-          <img src="../../assets/img/incorrecto.png" class="rounded-image">
+          <img src="../../assets/img/ninolloraclase-p.jpg" class="rounded-image">
         </ion-card-content>
       </ion-card>
       <ion-row>

@@ -54,6 +54,19 @@ export class DatabaseService {
     'Providencia',
     'assets/img/carlaPhoto.png' 
   );
+  testUser4 = Usuario.getNewUsuario(
+    'admin', 
+    'admin@duocuc.cl', 
+    'admin', 
+    'Lugar de nacimiento de su madre',
+    'Peñaflor',
+    'Vanessa', 
+    'Matta', 
+    NivelEducacional.buscarNivel(6)!,
+    new Date(2000, 2, 20),
+    'Providencia',
+    'assets/img/carlaPhoto.png' 
+  );
 
   userUpgrades = [
     {
@@ -135,7 +148,7 @@ export class DatabaseService {
 
   async createTestUsers() {
     try {
-      const testUsers = [this.testUser1, this.testUser2, this.testUser3];
+      const testUsers = [this.testUser1, this.testUser2, this.testUser3, this.testUser4];
   
       for (const user of testUsers) {
         const existingUser = await this.readUser(user.username);
@@ -191,7 +204,41 @@ export class DatabaseService {
       showAlertError('DataBaseService.saveUser', error);
     }
   }
-
+  async createUser(user: Usuario): Promise<void> {
+    try {
+      this.sqlInsertUpdate = `
+        INSERT INTO USUARIO (
+          username, 
+          correo, 
+          password, 
+          fraseSecreta, 
+          respuestaSecreta,
+          nombre, 
+          apellido,
+          nivelEducacional, 
+          fechaDeNacimiento,
+          direccion,
+          foto
+        ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
+      `;
+      await this.db.run(this.sqlInsertUpdate, [
+          user.username, 
+          user.correo, 
+          user.password,
+          user.fraseSecreta, 
+          user.respuestaSecreta, 
+          user.nombre, 
+          user.apellido,
+          user.nivelEducacional.id, 
+          convertDateToString(user.fechaDeNacimiento), 
+          user.direccion,
+          user.foto
+      ]);
+      await this.readUsers();
+    } catch (error) {
+      showAlertError('DataBaseService.saveUser', error);
+    }
+  }
   // Cada vez que se ejecute leerUsuarios() la aplicación va a cargar los usuarios desde la base de datos,
   // y por medio de la instrucción "this.listaUsuarios.next(usuarios);" le va a notificar a todos los programas
   // que se subscribieron a la propiedad "listaUsuarios", que la tabla de usuarios se acaba de cargar. De esta

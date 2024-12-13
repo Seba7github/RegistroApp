@@ -3,29 +3,27 @@
     <ion-nav-link slot="start" class="ion-margin" style="margin: 0; margin-left: 15px;">
       <app-language #selectLanguage></app-language>
     </ion-nav-link>
-    <div slot="end" class="ion-margin" style="margin: 0;">
+    <div slot="end" class="ion-margin">
       <ion-nav-link (click)="navigateTheme()">
         <ion-icon name="color-wand-outline"></ion-icon>
         {{ 'Login.Button.Theme' | translate }}
       </ion-nav-link>
     </div>
-   </ion-toolbar>
+  </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true" class="ion-padding-horizontal ion-text-center">
-  
   <div class="background"></div>
   <div class="centrar">
-    
-    <div>
-      
-      <img src="../../assets/img/logoBlanco.png" style="width: 75%;">
+    <div style="margin-top:80px">
+      <img src="../../assets/img/logoBlanco.png" class="shadowed-image">
       <h2 class="ion-padding-bottom">{{ 'AppName' | translate }}</h2>
       <ion-card>
         <ion-card-content class="ion-padding-vertical">
           <ion-item>
             <ion-icon slot="start" src="../../../assets/img/Screenshot2.png" aria-hidden="true"></ion-icon>
             <ion-input
+              id="correo"
               [(ngModel)]="correo"
               label="{{ 'Login.Label.Email' | translate }}" 
               labelPlacement="floating"
@@ -37,6 +35,7 @@
           <ion-item>
             <ion-icon slot="start" src="../../../assets/icon/Screenshot1.png" aria-hidden="true"></ion-icon>
             <ion-input
+              id="password"
               [(ngModel)]="password"
               label="{{ 'Login.Label.Password' | translate }}"
               labelPlacement="floating"
@@ -46,18 +45,28 @@
             </ion-input>
           </ion-item>
         </ion-card-content>
-    
-          <ion-button class="ion-padding-vertical" (click)="login()">{{ 'Login.Button.Login' | translate }}</ion-button>
-        </ion-card>
-    
-      <ion-col>
-        <ion-row class="centrar">
-          <ion-nav-link (click)="passwordRecovery()">{{ 'Login.Button.ForgotPassword' | translate }}</ion-nav-link>
-        </ion-row>
-        <ion-row class="centrar">
-          <ion-nav-link (click)="miruta()">{{ 'Login.Button.Map' | translate }}</ion-nav-link>
-        </ion-row>
-      </ion-col>
+
+        <!-- Main Buttons Section -->
+        <div class="buttons-container" style="margin-bottom: -20px">
+          <ion-button class="ion-padding-vertical" (click)="login()">
+            {{ 'Login.Button.Login' | translate }}
+          </ion-button>
+        </div>
+        
+        <div class="additional-buttons-container">
+          <ion-button class="ion-padding-vertical" (click)="passwordRecovery()">
+            {{ 'Login.Button.ForgotPassword' | translate }}
+          </ion-button>
+          <ion-button class="ion-padding-vertical" (click)="registrarme()">
+            {{ 'Login.Button.registrarme' | translate }}
+          </ion-button>
+          <ion-button class="ion-padding-vertical" (click)="miruta()">
+            {{ 'Login.Button.Map' | translate }}
+          </ion-button>
+        </div>
+        
+      </ion-card>
     </div>
   </div>
 </ion-content>
+

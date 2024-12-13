@@ -18,6 +18,7 @@
     "Login.Button.Signin": "Registrarse",
     "Login.Button.ForgotPassword": "Recuperar contraseña",
     "Login.Button.Map": "Mi ruta a DuocUC",
+    "Login.Button.registrarme": "Registrarme",
     "Login.Button.DarkMode": "Oscuro",
     "Login.Button.Theme": "Tema",
 
@@ -26,6 +27,7 @@
     "HomePage.Button.MiClase": "Mi Clase",
     "HomePage.Button.Forum": "Foro",
     "HomePage.Button.MisDatos": "Mis Datos",
+    "HomePage.Button.Usuarios": "Usuarios",
 
     "ThemePage.Label.ColorTheme": "Tema de color:",
     "ThemePage.Color.Light": "Claro",
@@ -64,5 +66,24 @@
     "ThemePage.Form.DescriptionLabel": "Descripción",
     "ThemePage.Form.DescriptionPlaceholder": "Escribe aquí una descripción...",
     "ThemePage.Form.ToggleLabel": "Activar notificaciones",
-    "ThemePage.Form.CheckboxLabel": "Acepto los términos"
+    "ThemePage.Form.CheckboxLabel": "Acepto los términos",
+
+    "PasswordConfirmation.correctData": "¡Datos correctos! <br> Tu contraseña <br> es {{ password }}",
+    "PasswordConfirmation.incorrectData": "¡Intenta de nuevo! <br> El correo ingresado <br> no es correcto",
+    "Registro.Title":"Registro",
+    "Registro.Label.Usuario":"Usuario",
+    "Registro.Label.Nombre":"Nombre",
+    "Registro.Label.Apellido":"Apellido",
+    "Registro.Label.Correo":"Correo",
+    "Registro.Label.Direccion":"Direccion",
+    "Registro.Label.PreguntaSecreta":"Pregunta Secreta",
+    "Registro.Label.RespuestaSecreta":"Respuesta Secreta",
+    "Registro.Label.NivelEducacional":"Nivel Educacional",
+    "Registro.Label.FechaNacimiento":"Fecha Nacimiento",
+    "Registro.Label.Contraseña":"Contraseña",
+    "Registro.Label.RepetirContraseña":"Repetir Contraseña",
+    "Registro.Button.CrearCuenta":"Crear Cuenta",
+    "Usuarios.Title.Admin":"Usuarios"
+
+
 }

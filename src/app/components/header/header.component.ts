@@ -43,7 +43,7 @@ export class HeaderComponent implements AfterViewInit {
       .create()
       .addElement(this.itemTitulo.nativeElement)
       .iterations(Infinity)
-      .duration(8000) // Cambia la duración a 6000 milisegundos para que sea más rápida
+      .duration(6000) // Cambia la duración a 6000 milisegundos para que sea más rápida
       .fromTo('transform', 'translate(-500%)', 'translate(1000%)') // Cambia a -100% para que empiece desde fuera de la pantalla
       .fromTo('opacity', 1, 0)
       .play();

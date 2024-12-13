@@ -1,45 +1,83 @@
+/* Styling for ion-content */
 ion-content {
-  position: relative;
+  position: absolute;
+  padding: 0; /* Elimina cualquier padding por defecto */
+  width: 100%; /* Asegura que cubra todo el ancho de la página */
+  height: 100%; /* Asegura que cubra toda la altura de la página */
+  overflow: hidden; /* Evita que haya barras de desplazamiento */
 }
 
+/* Background styling for full-page effect with a blurred, moving image */
 .background {
-  position: absolute;
+  position: absolute; /* Ensures the background stays fixed in place */
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
-  background: url('/assets/img/pao2.jpg') no-repeat center center / cover;
-  filter: blur(2px);
+  width: 100%; /* Covers the entire viewport width */
+  height: 100%; /* Covers the entire viewport height */
+  
+  /* Background image with responsive settings */
+  background: url('/assets/img/pao2.jpg') no-repeat center center;
+  background-size: cover; /* Ensures the image scales appropriately to avoid cutting */
+  background-attachment: fixed; /* Keeps the background fixed during scroll */
+  background-color: #f4f4f4; /* Fallback color for empty areas */
+  
+  /* Blur effect for a soft, aesthetic background */
+  filter: blur(2px) brightness(1.2); /* Brightness makes the background lighter */
+  
+  /* Places the background behind other elements */
   z-index: -1;
+
+  /* Animation for a subtle moving effect */
+  animation: moveBackground 20s infinite alternate linear;
 }
 
+/* Overlay to make the background more readable */
 
 
+/* Animation definition for background movement */
+@keyframes moveBackground {
+  0% {
+    background-position: center center;
+  }
+  50% {
+    background-position: center top;
+  }
+  100% {
+    background-position: center bottom;
+  }
+}
 
+/* Shadowed image styling */
+.shadowed-image {
+  width: 75%;
+  text-shadow: 2px 2px 5px rgba(5, 5, 5, 0.5);
+  filter: drop-shadow(4px 4px 10px rgba(0, 0, 0, 0.5));
+}
+
+/* Content wrapper to ensure proper layering */
 .content {
   position: relative;
   z-index: 2;
   padding: 20px;
 }
 
+/* Custom styles for ion-item */
 ion-item {
   --padding-start: 16px;
   --padding-top: 10px;
   --inner-padding-top: 10px;
+  min-height: 50px;
+  overflow: visible;
 }
 
+/* Custom styles for ion-input */
 ion-input {
   --inner-padding-start: 12px;
   overflow: visible; 
 }
 
+/* Custom styles for ion-label */
 ion-label {
   white-space: nowrap;
   overflow: visible; 
 }
-
-ion-item {
-  min-height: 70px;
-  overflow: visible;
-}
-

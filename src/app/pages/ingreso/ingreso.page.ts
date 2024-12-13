@@ -74,7 +74,9 @@ export class IngresoPage implements ViewWillEnter {
   passwordRecovery() {
     this.router.navigate(['/correo']);
   }
-
+  registrarme() {
+    this.router.navigate(['/registrarme']);
+  }
   miruta() {
     this.router.navigate(['/miruta']);
   }

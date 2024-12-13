@@ -1,19 +1,60 @@
+/* Importing a modern font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* Styling for ion-toolbar */
 ion-toolbar {
   overflow: visible;
   position: relative;
+  font-family: 'Poppins', sans-serif; /* Applying modern font */
 }
 
+/* Styling for ion-title with modern font and orange color */
 ion-toolbar ion-title {
   position: absolute;
   top: 20%;
+  animation: moveTitle 10s ease-in-out infinite; /* Animation without fading */
+  font-family: 'Poppins', sans-serif; /* Applying modern font */
+  color: #ffcc00; /* Light orange color, almost yellow */
+  font-weight: 600; /* Optionally set font weight for a bolder title */
+  opacity: 1; /* Ensure no fading during the animation */
 }
 
+/* Styling for logoHeader */
 .logoHeader {
-	--border-radius: 0px;
-	height: 40px;
-	width: auto;
-	position: absolute;
-	z-index: 1;
-	top: 10%;
+  --border-radius: 0px;
+  height: 40px;
+  width: auto;
+  position: absolute;
+  z-index: 1;
+  top: 10%;
+  animation: moveLogo 15s ease-in-out infinite; /* Animation without fading */
+  font-family: 'Poppins', sans-serif; /* Applying modern font */
+  color: #ffcc00; /* Light orange color, almost yellow */
+  opacity: 1; /* Ensure no fading during the animation */
 }
 
+/* Animation definition for title movement */
+@keyframes moveTitle {
+  0% {
+    top: 20%;
+  }
+  50% {
+    top: 25%;
+  }
+  100% {
+    top: 20%;
+  }
+}
+
+/* Animation definition for logo movement */
+@keyframes moveLogo {
+  0% {
+    top: 10%;
+  }
+  50% {
+    top: 15%;
+  }
+  100% {
+    top: 10%;
+  }
+}

@@ -3,7 +3,7 @@ import { HttpClient, HttpHeaders, HttpErrorResponse } from '@angular/common/http
 import { BehaviorSubject, lastValueFrom } from 'rxjs';
 import { retry } from 'rxjs/operators';
 import { Post } from '../model/post';
-import { showAlertError } from '../tools/message-functions';
+import { showAlertError, showToast } from '../tools/message-functions';
 
 @Injectable({
   providedIn: 'root'
@@ -13,7 +13,7 @@ export class APIClientService {
   httpOptions = {
     headers: new HttpHeaders({
       'Content-Type': 'application/json',
-      'Access-Control-Allow-Origin': '*'
+      //'Access-Control-Allow-Origin': '*'
     })
   };
 
@@ -110,7 +110,7 @@ export class APIClientService {
           showAlertError(`${methodName} - Error interno del servidor (500)`, message);
           break;
         case 0:
-          showAlertError(`${methodName} - Error de conexión (0)`, 'El servidor no está disponible. Asegúrate de que esté en funcionamiento.');
+          showToast('Error de conexión - El servidor no está disponible.');
           break;
         default:
           showAlertError(`${methodName} - Error inesperado (${statusCode})`, message);

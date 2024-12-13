@@ -112,3 +112,34 @@ ion-item {
   font-size: 16px;
   padding-top: 12px;
 }
+
+// Estilo personalizado para ion-button
+ion-button {
+  --background: #f7b731; // Fondo amarillo
+  --color: #000000; // Texto negro
+  --background-hover: #e09e2c; // Fondo amarillo oscuro al pasar el mouse
+  --border-radius: 25px; // Bordes más redondeados
+  --padding-start: 20px; // Espaciado a la izquierda
+  --padding-end: 20px;   // Espaciado a la derecha
+  --padding-top: 10px;   // Espaciado superior
+  --padding-bottom: 10px; // Espaciado inferior
+  --font-size: 16px; // Tamaño de fuente
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out; // Animación de transformación y sombra
+  
+  /* Evitar que el texto se desborde */
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+
+  &:hover {
+    transform: translateY(-2px); // Desplazamiento al pasar el mouse
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); // Agregar sombra al pasar el mouse
+  }
+
+  &:active {
+    transform: translateY(0px); // Mantener el botón en su lugar cuando se presiona
+  }
+
+
+}
+

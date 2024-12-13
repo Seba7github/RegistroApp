@@ -5,17 +5,19 @@
       (ionChange)="sendClickEvent($event)"
       [(ngModel)]="selectedButton"
     >
-      <ion-segment-button value="codigoqr">
+      <ion-segment-button 
+      *ngIf="!isAdmin" value="codigoqr">
         <ion-icon name="qr-code-outline"></ion-icon>
         {{ "HomePage.Button.CodigoQR" | translate }}
       </ion-segment-button>
       
-      <ion-segment-button value="mi-clase">
+      <ion-segment-button 
+        *ngIf="!isAdmin" value="mi-clase">
         <ion-icon name="home-outline"></ion-icon>
         {{ "HomePage.Button.MiClase" | translate }}
       </ion-segment-button>
       
-      <ion-segment-button value="forum">
+      <ion-segment-button value="forum" id="foro">
         <ion-icon name="pencil-outline"></ion-icon>
         {{ "HomePage.Button.Forum" | translate }}
       </ion-segment-button>
@@ -23,6 +25,11 @@
       <ion-segment-button value="mis-datos">
       <ion-icon name="person-outline"></ion-icon>
       {{ "HomePage.Button.MisDatos" | translate }}
+    </ion-segment-button>
+    <ion-segment-button 
+    *ngIf="isAdmin" value="usuarios">
+      <ion-icon name="person-outline"></ion-icon>
+      {{ "HomePage.Button.Usuarios" | translate }}
     </ion-segment-button>
 
     </ion-segment>

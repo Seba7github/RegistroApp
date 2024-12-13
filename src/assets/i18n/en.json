@@ -4,7 +4,7 @@
     "Author": "Cristián Gómez Vega",
     "Language": "Language",
     "Language.English": "English",
-    "Language.Spanish": "Español",
+    "Language.Spanish": "Spanish",
     "Language.Mapudungun": "Mapudungun",
     
     "Start.StartNewExperience": "Start a new experience",
@@ -14,26 +14,28 @@
     "Login.Placeholder.Email": "Enter your email here",
     "Login.Label.Password": "Password",
     "Login.Placeholder.Password": "Enter your password here",
-    "Login.Button.Login": "Login",
+    "Login.Button.Login": "Log In",
     "Login.Button.Signin": "Sign Up",
-    "Login.Button.ForgotPassword": "Forgot my password",
+    "Login.Button.ForgotPassword": "Recover Password",
+    "Login.Button.Map": "My route to DuocUC",
+    "Login.Button.registrarme": "Register",
     "Login.Button.DarkMode": "Dark Mode",
+    "Login.Button.Theme": "Theme",
 
-    "WelcomePage.Title.Wellcome": "Welcome to Angry-Dinosaurs!",
-
-    "HomePage.Button.Wellcome": "Home",
+    "HomePage.Button.CodigoQR": "QR",
     "HomePage.Button.Scan": "Scan",
-    "HomePage.Button.Dinosaur": "Dinosaur",
+    "HomePage.Button.MiClase": "My Class",
     "HomePage.Button.Forum": "Forum",
+    "HomePage.Button.MisDatos": "My Data",
 
-    "ThemePage.Label.ColorTheme": "Color Theme:",
+    "ThemePage.Label.ColorTheme": "Color theme:",
     "ThemePage.Color.Light": "Light",
     "ThemePage.Color.Dark": "Dark",
     "ThemePage.Color.Green": "Green",
     "ThemePage.Color.Red": "Red",
     "ThemePage.Color.Facebook": "Facebook",
     "ThemePage.Color.Instagram": "Instagram",
-    "ThemePage.Color.Duoc": "Duoc",
+    "ThemePage.Color.Duoc": "DUOC",
     
     "ThemePage.Button.Primary": "Primary Button",
     "ThemePage.Button.Secondary": "Secondary Button",
@@ -44,7 +46,7 @@
     "ThemePage.Button.Light": "Light Button",
     "ThemePage.Button.Dark": "Dark Button",
     "ThemePage.Button.Home": "Home",
-    "ThemePage.Button.Logout": "Logout",
+    "ThemePage.Button.Logout": "Log Out",
     
     "ThemePage.Card.Title": "Card Title",
     "ThemePage.Card.Subtitle": "Card Subtitle",
@@ -63,5 +65,24 @@
     "ThemePage.Form.DescriptionLabel": "Description",
     "ThemePage.Form.DescriptionPlaceholder": "Write a description here...",
     "ThemePage.Form.ToggleLabel": "Enable notifications",
-    "ThemePage.Form.CheckboxLabel": "I accept the terms"
+    "ThemePage.Form.CheckboxLabel": "I accept the terms",
+
+    "PasswordConfirmation.correctData": "Correct data! <br> Your password <br> is {{ password }}",
+    "PasswordConfirmation.incorrectData": "Try again! <br> The entered email <br> is incorrect",
+    "Registro.Title": "Register",
+    "Registro.Label.Usuario": "User",
+    "Registro.Label.Nombre": "First Name",
+    "Registro.Label.Apellido": "Last Name",
+    "Registro.Label.Correo": "Email",
+    "Registro.Label.Direccion": "Address",
+    "Registro.Label.PreguntaSecreta": "Secret Question",
+    "Registro.Label.RespuestaSecreta": "Secret Answer",
+    "Registro.Label.NivelEducacional": "Educational Level",
+    "Registro.Label.FechaNacimiento": "Date of Birth",
+    "Registro.Label.Contraseña": "Password",
+    "Registro.Label.RepetirContraseña": "Repeat Password",
+    "Registro.Button.CrearCuenta": "Create Account"
+
+    
 }
+
